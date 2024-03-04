@@ -1,0 +1,199 @@
+.charts > svg {
+  color: var(--spectrum-global-color-gray-600);
+}
+
+.charts .spectrum-Subheading {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.axis path, .axis line {
+  fill: none;
+  shape-rendering: crispedges;
+}
+
+.axis path {
+  stroke: var(--spectrum-global-color-gray-800);
+}
+
+.axis line {
+  stroke: var(--transparentGray900);
+}
+
+.x.axis path {
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.y.axis path {
+  display: none;
+}
+
+.grid path, .grid line {
+  stroke: var(--spectrum-global-color-gray-300);
+  shape-rendering: crispedges;
+}
+
+.line {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.axis > text {
+  fill: var(--spectrum-global-color-gray-600);
+  font-size: 12px;
+}
+
+#colorMetrics {
+  height: calc(100vh - var(--header-height));
+  display: none;
+  overflow-y: scroll;
+}
+
+#colorMetrics.visible {
+  display: flex;
+}
+
+#contrastChart g.d3_xy_chart_line ~ g.d3_xy_chart_line ~ g.d3_xy_chart_line path.line {
+  stroke: #0f4f87;
+}
+
+#contrastChart g.d3_xy_chart_line ~ g.d3_xy_chart_line path.line {
+  stroke: #449cad;
+}
+
+#contrastChart g.d3_xy_chart_line path.line {
+  stroke: #76d0c5;
+}
+
+.chart--labelless .x.axis .tick {
+  display: none;
+}
+
+#RGBchart g.d3_xy_chart_line ~ g.d3_xy_chart_line ~ g.d3_xy_chart_line path.line, #sequentialRGBchart g.d3_xy_chart_line ~ g.d3_xy_chart_line ~ g.d3_xy_chart_line path.line, #divergingRGBchart g.d3_xy_chart_line ~ g.d3_xy_chart_line ~ g.d3_xy_chart_line path.line {
+  stroke: var(--spectrum-global-color-blue-400);
+}
+
+#RGBchart g.d3_xy_chart_line ~ g.d3_xy_chart_line path.line, #sequentialRGBchart g.d3_xy_chart_line ~ g.d3_xy_chart_line path.line, #divergingRGBchart g.d3_xy_chart_line ~ g.d3_xy_chart_line path.line {
+  stroke: var(--spectrum-global-color-celery-400);
+}
+
+#RGBchart g.d3_xy_chart_line path.line, #sequentialRGBchart g.d3_xy_chart_line path.line, #divergingRGBchart g.d3_xy_chart_line path.line {
+  stroke: var(--spectrum-global-color-red-400);
+}
+
+#RGBchart .tick, #sequentialRGBchart .tick, #divergingRGBchart .tick, #interpolationChart .x.axis text, #interpolationChart2 .x.axis text, #interpolationChart3 .x.axis text {
+  display: none;
+}
+
+._3d.grid, ._3dtheme.grid, ._3dsequential.grid, ._3ddiverging.grid {
+  stroke: var(--spectrum-global-color-gray-300);
+  stroke-width: .3px;
+  fill: var(--spectrum-global-color-gray-300);
+  fill-opacity: .075;
+}
+
+.chart3D, .chart3Dsequential, .chart3Ddiverging {
+  cursor: move;
+}
+
+._3d.yText, ._3dtheme.yText, ._3dsequential.yTextsequential, ._3ddiverging.yTextdiverging {
+  color: #6e6e6e;
+}
+
+.sequentialTabsWrapper, .divergingTabsWrapper, .qualitativeTabsWrapper {
+  flex-direction: column;
+  display: none;
+  overflow: hidden auto;
+}
+
+#chartsWrapper, #modelWrapper {
+  background-color: var(--spectrum-global-color-gray-100, #f5f5f5);
+  flex-direction: column;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  overflow: auto;
+}
+
+.js-plotly-plot .plotly .user-select-none {
+  margin: 0 auto;
+}
+
+.chartsWrapper {
+  padding-top: var(--spectrum-global-dimension-size-200);
+  flex-direction: column;
+}
+
+.charts {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding: 0;
+  display: flex;
+}
+
+.charts ~ .charts {
+  margin-left: 16px;
+}
+
+#chart1, #chart2, #chart3, #chart4, #contrastChart, #luminosityChart {
+  border-radius: 4px;
+}
+
+#chart1 svg, #chart2 svg, #chart3 svg, #chart4 svg, #contrastChart svg, #luminosityChart svg {
+  color: var(--spectrum-global-color-gray-500);
+}
+
+.chartGroup .spectrum-Heading6 {
+  align-items: flex-end;
+  height: 32px;
+  display: flex;
+}
+
+#chart3dWrapper {
+  cursor: move;
+  flex-direction: column;
+  align-self: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: 100%;
+  display: flex;
+}
+
+.chart3d {
+  display: none;
+}
+
+svg.main-svg {
+  background: none !important;
+}
+
+.chartsRow {
+  flex-direction: row;
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+}
+
+.chartsColumn--left, .chartsColumn--right {
+  flex-direction: column;
+  display: flex;
+}
+
+.chartsColumn--left {
+  width: 40%;
+}
+
+.chartsColumn--right {
+  width: 60%;
+}
+
+/*# sourceMappingURL=scales.b4f082b9.css.map */

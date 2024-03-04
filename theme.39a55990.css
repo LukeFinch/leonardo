@@ -1,0 +1,123 @@
+.spectrum-Popover {
+  --spectrum-overlay-animation-distance: var(--spectrum-picker-m-texticon-popover-offset-y, var(--spectrum-global-dimension-size-75));
+  visibility: hidden;
+  opacity: 0;
+  transition: transform var(--spectrum-global-animation-duration-100, .13s) ease-in-out, opacity var(--spectrum-global-animation-duration-100, .13s) ease-in-out, visibility 0s linear var(--spectrum-global-animation-duration-100, .13s);
+  pointer-events: none;
+}
+
+.spectrum-Popover.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.spectrum-Popover--bottom.is-open {
+  transform: translateY(var(--spectrum-overlay-animation-distance));
+}
+
+.spectrum-Popover--top.is-open {
+  transform: translateY(calc(-1 * var(--spectrum-overlay-animation-distance)));
+}
+
+.spectrum-Popover--right.is-open {
+  transform: translateX(var(--spectrum-overlay-animation-distance));
+}
+
+.spectrum-Popover--left.is-open {
+  transform: translateX(calc(-1 * var(--spectrum-overlay-animation-distance)));
+}
+
+.spectrum-Popover {
+  --spectrum-popover-target-offset: 13px;
+  --spectrum-popover-dialog-padding: 30px 29px;
+  --spectrum-popover-dialog-min-width: 270px;
+  --spectrum-popover-min-width: var(--spectrum-global-dimension-size-400);
+  --spectrum-popover-min-height: var(--spectrum-global-dimension-size-400);
+  box-sizing: border-box;
+  min-width: var(--spectrum-popover-min-width, var(--spectrum-global-dimension-size-400));
+  min-height: var(--spectrum-popover-min-height, var(--spectrum-global-dimension-size-400));
+  border-style: solid;
+  border-width: var(--spectrum-popover-border-size, var(--spectrum-alias-border-size-thin));
+  border-radius: var(--spectrum-popover-border-radius, var(--spectrum-alias-border-radius-regular));
+  outline: none;
+  flex-direction: column;
+  display: inline-flex;
+  position: absolute;
+}
+
+.spectrum-Popover-tip {
+  position: absolute;
+  -webkit-transform: translate(0);
+}
+
+.spectrum-Popover-tip .spectrum-Popover-tip-triangle {
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: var(--spectrum-popover-border-size, var(--spectrum-alias-border-size-thin));
+}
+
+.spectrum-Popover--dialog {
+  min-width: var(--spectrum-popover-dialog-min-width);
+  padding: var(--spectrum-popover-dialog-padding);
+}
+
+.spectrum-Popover--left.spectrum-Popover--withTip {
+  margin-right: var(--spectrum-popover-target-offset);
+}
+
+.spectrum-Popover--left .spectrum-Popover-tip {
+  left: 100%;
+}
+
+.spectrum-Popover--right.spectrum-Popover--withTip {
+  margin-left: var(--spectrum-popover-target-offset);
+}
+
+.spectrum-Popover--right .spectrum-Popover-tip {
+  right: 100%;
+  transform: scaleX(-1);
+}
+
+.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--right .spectrum-Popover-tip {
+  margin-top: calc(var(--spectrum-global-dimension-size-150) * -1);
+  top: 50%;
+}
+
+.spectrum-Popover--bottom.spectrum-Popover--withTip {
+  margin-top: var(--spectrum-popover-target-offset);
+}
+
+.spectrum-Popover--bottom .spectrum-Popover-tip {
+  bottom: 100%;
+  transform: scaleY(-1);
+}
+
+.spectrum-Popover--top.spectrum-Popover--withTip {
+  margin-bottom: var(--spectrum-popover-target-offset);
+}
+
+.spectrum-Popover--top .spectrum-Popover-tip {
+  top: 100%;
+}
+
+.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--top .spectrum-Popover-tip {
+  margin-left: calc(var(--spectrum-global-dimension-size-150) * -1);
+  left: 50%;
+}
+
+.spectrum-Popover {
+  background-color: var(--spectrum-popover-background-color, var(--spectrum-global-color-gray-50));
+  border-color: var(--spectrum-popover-border-color, var(--spectrum-alias-border-color-dark));
+  -webkit-filter: drop-shadow(0 1px 4px var(--spectrum-popover-shadow-color, var(--spectrum-alias-dropshadow-color)));
+  will-change: filter;
+  clip-path: inset(-30px);
+}
+
+.spectrum-Popover .spectrum-Popover-tip .spectrum-Popover-tip-triangle {
+  fill: var(--spectrum-popover-background-color, var(--spectrum-global-color-gray-50));
+  stroke: var(--spectrum-popover-border-color, var(--spectrum-alias-border-color-dark));
+}
+
+/*# sourceMappingURL=theme.39a55990.css.map */
